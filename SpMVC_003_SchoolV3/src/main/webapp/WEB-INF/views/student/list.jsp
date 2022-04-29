@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set value="${pageContext.request.contextPath}" var="rootPath" />
 
 <!DOCTYPE html>
@@ -75,7 +75,11 @@ div.button-box a:hover {
 	font-weight: bold;
 }
 </style>
-<script src="${rootPath}/static/js/student.js?ver=2022-04-26-001"></script>
+<script>
+	// JSP에서 사용하는 rootPath 변수 값을 JS에서 사용할 수 있도록 var 변수 선언 
+	var rootPath = "${rootPath}"
+</script>
+<script src="${rootPath}/static/js/student.js?ver=2022-04-30"></script>
 <body>
 	<%@ include file="/WEB-INF/views/include/include_header.jsp"%>
 	<%@ include file="/WEB-INF/views/include/include_nav.jsp"%>
@@ -88,13 +92,13 @@ div.button-box a:hover {
 				<th>학과</th>
 				<th>학년</th>
 			</tr>
-			<c:forEach items="${STUDENTS}" var="stVO">		
-			<tr>
-				<td>${stVO.stNum}</td>
-				<td class="name" data-num="${stVO.stNum}">${stVO.stName}</td>
-				<td>${stVO.stDept}</td>
-				<td>${stVO.intGrade}</td>
-			</tr>
+			<c:forEach items="${ST_LIST}" var="stVO">
+				<tr>
+					<td>${stVO.stNum}</td>
+					<td class="name" data-num="${stVO.stNum}">${stVO.stName}</td>
+					<td>${stVO.stDept}</td>
+					<td>${stVO.intGrade}</td>
+				</tr>
 			</c:forEach>
 		</table>
 		<div class="button-box">
@@ -106,7 +110,6 @@ div.button-box a:hover {
 </body>
 <script>
 	
-
 </script>
 
 </html>

@@ -1,7 +1,5 @@
 package com.callor.school.controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +27,7 @@ public class StudentController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
-		List<StudentVO> stList = stService.selectAll();
-		model.addAttribute("STUDENTS", stList);
+		model.addAttribute("ST_LIST", stService.selectAll());
 		
 		// @RequestMapping이 student/list이기 때문에 return null 을 수행하면 return "student/list"를 수행한 것과 동일한 효과
 		return null;
@@ -48,9 +45,10 @@ public class StudentController {
 	
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detail(String stNum, Model model) {
+		
 		StudentVO stVO = stService.FindByStNum(stNum);
-		model.addAttribute("STUDENT", stVO);
-		return "student/detail_view";
+		model.addAttribute("ST",stVO);
+		return null;
 	}
 	
 	@RequestMapping(value="/update", method = RequestMethod.GET)
