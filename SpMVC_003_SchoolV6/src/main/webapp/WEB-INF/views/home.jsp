@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>반갑습니다!!!</h1>
+<h1 style="color: blue">야호~~!!!</h1>
+<h1 style="color: green">워후~~!!!</h1>
 </body>
 </html>
