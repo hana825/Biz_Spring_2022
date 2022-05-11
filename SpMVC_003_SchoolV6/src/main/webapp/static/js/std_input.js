@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return false;
       }
       //   alert("입력한 학번 : " + st_num.value);
-      fetch(`${rootPath}/student/st_num_check?st_num=${st_num.value}`)
+      `${rootPath}/student/st_num_check?st_num=${st_num.value}`
         .then((res) => res.text())
         .then((result) => {
           alert(result);
