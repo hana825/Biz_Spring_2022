@@ -32,6 +32,11 @@
 		outline: none;
 		text-align: center;
 	}
+	form div:first-of-type div {
+		flex: 3;
+		margin: 0px;
+	}
+	
 	form div:first-of-type input {
 		flex: 2;
 		margin-right: 10px;
@@ -43,14 +48,17 @@
 	
 </style>
 <script> const rootPath = "${rootPath}"</script>
-<script src="${rootPath}/static/js/std_input.js?ver=2022-05-10-010"></script>
+<script src="${rootPath}/static/js/std_input_save.js?ver=2022-05-12-004"></script>
+<script src="${rootPath}/static/js/std_input.js?ver=2022-05-12-004"></script>
 <form method="post">
 	<fieldset>
 	<legend>학생정보 등록</legend>
 	<div>
 		<label>학번</label>
+		<div>
 		<input type="text" name="st_num">
 		<button type="button" class="btn-red std-num-check">중복검사</button>
+		</div>
 	</div>
 	<div>
 		<label>이름</label>
