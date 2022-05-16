@@ -100,6 +100,10 @@
 		background-color: orange;
 		color: white;
 	}
+	article.st-list{
+		overflow: hidden;
+		max-height: 65vh;
+	}
 </style>
 <script>
 	// jsp의 속성(변수)값을 JS로 보내기 위해 JS 변수로 선언
@@ -134,7 +138,9 @@
 		</article>
 		</c:when>
 		<c:otherwise>
-		<article></article>
+		<article class="st-list">
+		<%@ include file="/WEB-INF/views/student/list.jsp" %>
+		</article>
 		<article></article>
 		<article></article>
 		</c:otherwise>
