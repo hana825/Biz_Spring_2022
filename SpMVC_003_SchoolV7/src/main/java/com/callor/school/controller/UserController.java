@@ -3,8 +3,10 @@ package com.callor.school.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.callor.school.model.UserVO;
 import com.callor.school.service.UserService;
@@ -64,5 +66,34 @@ public class UserController {
 		return "redirect:/user/login";
 		
 	}
+	
+	@RequestMapping(value ="/join", method= RequestMethod.GET)
+	public String join() {
+		
+		/* 
+		 * 이 method를 요청하는 url은 /user/join 이다.
+		 * return null 을 실행하면 return user/join을 실행한 것과 같다.
+		 * views/user/join.jsp를 rendering 하라는 의미 
+		 */
+		return null;
+	}
 
+	/*
+	 * username 중복검사를 하기 위하여 보통 다음과 같은 요청을 수행한다. 
+	 * /user/idcheck?username=aaa
+	 * 
+	 * fetch(`${rootPath}/user/idcheck/${username.value}`)
+	 * 만약 username에 aaa 입력했으면
+	 * 	/user/idcheck/aaa 처럼 요청 URL 만들어서 요청을 수행하라
+	 * 
+	 */
+	@ResponseBody
+	@RequestMapping(value= "/idcheck/{username}", method= RequestMethod.GET)
+	public String idcheck(@PathVariable("username") String username) {
+		if(username.equals("hana")) {
+			return "FAIL";
+		} else {			
+			return "OK";
+		}
+	}
 }

@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>HOME</title>
+<link rel="icon" href="${rootPath}/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
