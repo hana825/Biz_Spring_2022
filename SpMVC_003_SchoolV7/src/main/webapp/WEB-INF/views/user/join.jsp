@@ -37,14 +37,14 @@
 	// JS 파일에서 rootPath를 사용할 수 있도록 미리 JS 변수로 선언
 	const rootPath = "${rootPath}"
 </script>
-<script src="${rootPath}/static/js/join.js?ver=2022-05-26-005"></script>
+<script src="${rootPath}/static/js/join.js?ver=2022-05-26-016"></script>
 </head>
 <body>
-	<form class="join" >
+	<form class="join" autocomplete="off" method="post">
 		<fieldset>
 			<legend>회원가입</legend>
 			<div>
-				<input name="username" placeholder="USERNAME" autocomplete="none"/>
+				<input name="username" placeholder="USERNAME" autocomplete="off"/>
 				<button class="id-check" type="button">중복검사</button>
 			</div>
 			<div class="username"></div>
