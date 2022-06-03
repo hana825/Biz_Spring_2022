@@ -9,10 +9,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Insert title here</title>
+<link rel="stylesheet" href="${rootPath}/static/css/book.css?ver=2022-06-03-001">
 </head>
 <body>
-	<h1>도서정보 리스트 보여주기</h1>
-	
-	<a href="${rootPath}/books/insert">도서정보추가</a>
+
+<%@ include file="/WEB-INF/views/home.jsp" %>
+	<section class="t-container">
+	<table>
+
+		<thead>
+			<tr>
+				<th>NO.</th>
+				<th>ISBN</th>
+				<th>도서명</th>
+				<th>출판사</th>
+				<th>저자</th>
+				<th>출판일자</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${BOOKS}" var="BOOK">
+				<tr>
+					<td>1</td>
+					<td>${BOOK.isbn}</td>
+					<td>${BOOK.title}</td>
+					<td>${BOOK.publisher}</td>
+					<td>${BOOK.author}</td>
+					<td>${BOOK.pubdate}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<div><a href="${rootPath}/books/insert"><button>도서정보추가</button></a></div>
+	</section>
 </body>
 </html>

@@ -64,5 +64,10 @@ public class BooksController {
 		log.debug("도서정보 : " + bookVO.toString());
 		return null;
 	}
+	
+	@RequestMapping(value="/view")
+	public String view() {
+		return null;
+	}
 
 }
