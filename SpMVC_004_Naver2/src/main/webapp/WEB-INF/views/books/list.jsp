@@ -9,11 +9,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Insert title here</title>
-<link rel="stylesheet" href="${rootPath}/static/css/book.css?ver=2022-06-03-001">
+<link rel="stylesheet" href="${rootPath}/static/css/book.css?ver=2022-06-03-002">
+<link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-02-003" />
 </head>
 <body>
 
-<%@ include file="/WEB-INF/views/home.jsp" %>
+	<header>
+		<h1>MY API</h1>
+		<p>Naver API를 활용한 도서, 뉴스 , 영화 정보 서비스</p>
+	</header>
+<%@ include file="/WEB-INF/views/nav.jsp" %>
 	<section class="t-container">
 	<table>
 
@@ -30,7 +35,7 @@
 		<tbody>
 			<c:forEach items="${BOOKS}" var="BOOK">
 				<tr>
-					<td>1</td>
+					<td>${BOOK.isbn}</td>
 					<td>${BOOK.isbn}</td>
 					<td>${BOOK.title}</td>
 					<td>${BOOK.publisher}</td>

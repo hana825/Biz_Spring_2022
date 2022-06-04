@@ -1,16 +1,21 @@
 @charset "UTF-8";
-	
+	* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 	section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		width: 60%;
 	}
 	div {
 		padding-top: 20px;
 		margin-left: auto;
 	}
 	.t-container {
-		margin: 0 auto;
+		margin: 10px auto;
 		padding: 10px 20px;
 	}
 	table {

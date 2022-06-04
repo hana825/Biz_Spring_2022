@@ -1,11 +1,24 @@
 @charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	margin: 20px auto;
+	width: 60%;
+}
+
 div {
 	display: flex;
-	
 }
+
 input {
-	flex:1;
+	flex: 1;
 }
+
 textarea {
 	display: block;
 	resize: none;
@@ -20,9 +33,11 @@ button {
 	padding: 8px 10px;
 	margin: 2px 5px;
 }
+
 button:hover {
 	cursor: pointer;
 }
+
 .btns {
 	padding-top: 20px;
 	justify-content: flex-end;

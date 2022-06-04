@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -62,6 +61,8 @@ public class BooksController {
 	@RequestMapping(value="/insert", method=RequestMethod.POST)
 	public String insert(BookVO bookVO) {
 		log.debug("도서정보 : " + bookVO.toString());
+		
+		bookService.save(bookVO);
 		return null;
 	}
 	
