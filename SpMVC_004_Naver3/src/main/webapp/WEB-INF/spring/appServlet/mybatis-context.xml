@@ -22,9 +22,9 @@
 		<property name="url"
 			value="jdbc:oracle:thin:@localhost:1521:xe" />
 		<property name="username" value="bookuser" />
-		<property name="password" value="12341234" />
+		<property name="password" value="bookuser" />
 	</bean>
-
+	
 	<!-- SqlSessionFactory -->
 	<!-- Dao, Mapper 등을 사용하여 DB 연결하는 bean 생산기지 설정 -->
 	<bean id="sqlSession"
@@ -32,9 +32,16 @@
 		<property name="dataSource" ref="ds" />
 		<property name="typeAliasesPackage"
 			value="com.callor.naver.model" />
-			
 		<property name="mapperLocations"
 			value="/WEB-INF/spring/mapper/*-mapper.xml" />
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration">
+				<property name="jdbcTypeForNull" value="VARCHAR"></property>
+				<property name="cacheEnabled" value="true"></property>
+				<property name="defaultExecutorType" value="REUSE"></property>
+				<property name="mapUnderscoreToCamelCase" value="false"></property>
+			</bean>
+		</property>
 	</bean>
 
 	<!-- SqlSessionTemplate -->
