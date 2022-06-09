@@ -8,8 +8,8 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Insert title here</title>
-<link rel="stylesheet" href="${rootPath}/static/css/book.css?ver=2022-06-03-002">
+<title>도서정보</title>
+<link rel="stylesheet" href="${rootPath}/static/css/book.css?ver=2022-06-06-003">
 <link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-02-003" />
 </head>
 <body>

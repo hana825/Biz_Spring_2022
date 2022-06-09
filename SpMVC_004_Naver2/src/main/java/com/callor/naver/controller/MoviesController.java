@@ -11,4 +11,9 @@ public class MoviesController {
 	public String home() {
 		return "movies/list";
 	}
+	
+	@RequestMapping(value="/list")
+	public String list() {
+		return null;
+	}
 }

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set value="${pageContext.request.contextPath}" var="rootPath" />
-<link rel="stylesheet" href="${rootPath}/static/css/insert.css?ver=2022-06-03-003">
+<link rel="stylesheet" href="${rootPath}/static/css/insert.css?ver=2022-06-06-005">
 <link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-02-003" />
 <script>
 	const rootPath = "${rootPath}"

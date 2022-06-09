@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>나의 API App</title>
 <link rel="stylesheet" href="${rootPath}/static/css/main.css?ver=2022-06-02-002" />
-<link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-02-003" />
+<link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-06-002" />
 <link rel="stylesheet" href="${rootPath}/static/css/table.css?ver=2022-06-02-001" />
 <link rel="stylesheet" href="${rootPath}/static/css/modal.css?ver=2022-05-31-005" />
 <link rel="stylesheet" href="${rootPath}/static/css/input.css?ver=2022-05-31-005" />

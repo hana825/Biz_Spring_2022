@@ -8,6 +8,15 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=2022-06-06-001" />
+</head>
+<body>
+
+	<header>
+		<h1>MY API</h1>
+		<p>Naver API를 활용한 도서, 뉴스 , 영화 정보 서비스</p>
+	</header>
+<%@ include file="/WEB-INF/views/nav.jsp" %>
 <title>MOVIES</title>
 </head>
 <body>
