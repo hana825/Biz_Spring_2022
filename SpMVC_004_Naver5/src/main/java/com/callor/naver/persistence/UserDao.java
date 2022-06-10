@@ -1,4 +1,4 @@
-package com.callor.naver.persistance;
+package com.callor.naver.persistence;
 
 import java.util.List;
 
