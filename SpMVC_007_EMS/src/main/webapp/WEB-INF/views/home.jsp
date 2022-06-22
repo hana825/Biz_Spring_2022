@@ -11,33 +11,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>EMS HOME</title>
 <style>
-	form {
-		
+	section.main {
+		width: 70%;
+		margin:10px auto;
+	}
+	
+	form#emsVO input, form#emsVO button {
+		width: 90%;
 	}
 	
 	span {
-		color: red;
+		color:red;
 	}
 </style>
 </head>
 <body>
 	<section class="main">
-		<form:form>
-			
-			<form:input path="e_to_email" placeholder="받는 Email"/>
+		<form:form modelAttribute="emsVO">
+		
+			<form:input path="e_to_email" placeholder="받는 Email"/><br/>
 			<form:errors path="e_to_email"/>
 			
-			<form:input path="e_from_name" placeholder="보내는 사람 이름"/>
+			<form:input path="e_from_name"  placeholder="보내는 사람 이름"/><br/>
 			<form:errors path="e_from_name"/>
-
-			<form:input path="e_to_name" placeholder="받는 사람 이름"/>
+			
+			<form:input path="e_to_name"  placeholder="받는 사람 이름"/><br/>
 			<form:errors path="e_to_name"/>
 			
-			<form:input path="e_subject" placeholder="제목"/>
+			<form:input path="e_subject"  placeholder="제목"/><br/>
 			<form:errors path="e_subject"/>
 			
-			<form:input path="e_content" placeholder="내용"/>
-			
+			<form:input path="e_content"  placeholder="내용"/>
+			<button>보내기</button>
 		</form:form>
 	</section>
 </body>

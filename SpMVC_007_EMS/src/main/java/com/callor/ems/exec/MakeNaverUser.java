@@ -54,6 +54,8 @@ public class MakeNaverUser {
 				}
 				out.flush();
 				out.close();
+				
+				System.out.println("File Write OK!!");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}

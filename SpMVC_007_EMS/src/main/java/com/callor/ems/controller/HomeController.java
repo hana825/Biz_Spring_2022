@@ -36,14 +36,6 @@ public class HomeController {
 	public String home(@ModelAttribute("emsVO") EmsVO emsVO, Model model) {
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
 		Pattern PATT_BLACKET = Pattern.compile("\\([^\\(\\)]+\\)"); 
 		Matcher matcher = PATT_BLACKET.matcher(naver_username);
 		if(matcher.find()) {
@@ -72,7 +64,7 @@ public class HomeController {
 	 * 
 	 * @Valid와 BindingResult는 순서를 바꾸면 안된다.
 	 */
-	@RequestMapping(value="/home", method=RequestMethod.POST)
+	@RequestMapping(value="/", method=RequestMethod.POST)
 	public String home(@Valid EmsVO emsVO, BindingResult result) {
 		
 		if(result.hasErrors()) {
