@@ -6,7 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -30,7 +29,6 @@ public class EmsVO {
 	private long e_seq;
 
 	private String e_from_email;
-	
 	@Email(message = "Email 형식이 아닙니다")
 	@NotEmpty(message = "받는 사람 Email은 반드시 입력하세요")
 	private String e_to_email;
@@ -46,19 +44,19 @@ public class EmsVO {
 	private String e_subject;
 	private String e_content;
 	
+//	@Size(min=1, max=10, message = "num는 1부터 10사이 값이어야 합니다")
 	private String e_send_date;
 	private String e_send_time;
 	
-	@Min(value=1, message="num는 1보다 커야합니다")
-	@Max(value=10, message="num는 10보다 작아야합니다")
-	@Size(min=1, max=10, message = "num는 1부터 10사이 값이어야 합니다")
+//	@Min(value=1, message="num는 1보다 커야합니다")
+//	@Max(value=10, message="num는 10보다 작아야합니다")
 	private int num;
 	
-	@DecimalMin(value="1", message="decimal은 십진수 1보다 커야 합니다")
-	@DecimalMax(value="10", message="decimal은 십진수 10보다 작아야 합니다")
+//	@DecimalMin(value="1", message="decimal은 십진수 1보다 커야 합니다")
+//	@DecimalMax(value="10", message="decimal은 십진수 10보다 작아야 합니다")
 	private int decimal;
 	
-	@Pattern(regexp="/^.*(?=^.{8,15}$)(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/")
+//	@Pattern(regexp="/^.*(?=^.{8,15}$)(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/")
 	private String password;
 	
 }

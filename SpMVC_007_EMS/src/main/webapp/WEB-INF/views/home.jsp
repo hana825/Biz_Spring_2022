@@ -11,6 +11,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>EMS HOME</title>
 <style>
+	*{
+		background-color: #222;
+		color : #fff;
+	}
 	section.main {
 		width: 70%;
 		margin:10px auto;
