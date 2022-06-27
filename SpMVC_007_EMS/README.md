@@ -80,3 +80,4 @@
 * 만약 html 데이터를 text/plan 형식으로 보내면 웹 브라우저에 html tag 가 단순한 문자열로 그대로 노출된다.
 * MIME type은 인터넷 환경이 발전할 수록 계속 많아지고 더욱 다양해진다.
 * 현재 주로 많이 사용하는 것은 text.html, image/jpg, video/mp4, audio/mp3, application/json 등이 있다.
+
