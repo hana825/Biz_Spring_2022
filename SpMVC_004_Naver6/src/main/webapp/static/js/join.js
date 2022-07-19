@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // email 형식검사
   const emailRule =
     /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    
 
   // 화면이 모두 그려지면 username input box에 focusing
   username?.focus();
